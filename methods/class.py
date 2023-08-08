@@ -2,6 +2,7 @@ class Computer:
     def __init__(self) -> None:
         self.name="dell"
         self.price="50k"
+      
 
 
     def config(self):
@@ -13,6 +14,4 @@ class Computer:
 com1=Computer()
 com2=Computer()
 com1.update()
-
-com2.config()
-com1.config()
+print(com1.__dict__)

@@ -1,4 +1,4 @@
-from flask import Flask,request, jsonify
+from flask import Flask,request, jsonify,make_response
 
 app = Flask(__name__)
 
@@ -44,6 +44,8 @@ def update():
 "color": "white",
 "value": "#000000"
 })
-    return jsonify({"colors":colors})
+    response = make_response(jsonify({"colors":colors}), 200)
+    return response
+
 if __name__ == "__main__":
     app.run(debug=True)
